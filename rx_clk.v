@@ -8,8 +8,8 @@ module rx_clock_divider
   parameter rx_sampling_rate =  16 ) // no of samples for input bit 
 
   ( input clk, // system closk frequency input 
-    output rx_clock, // required output clock frequnecy ;
-   )
+    output rx_clock // required output clock frequnecy ;
+  );
 
 localparam rx_counter_max  = system_clock/(2*rx_baudrate*rx_sampling_rate) ; // maxing value of counter before reset
 localparam rx_counter_width = &clog2(rx_counter_max); // no of bits requried for the counter using log of 2
